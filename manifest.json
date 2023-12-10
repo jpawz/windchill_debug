@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Winchill debug on/off",
+    "version": "1.0",
+    "description": "Switch between debug mode on/off",
+    "permissions": [
+        "menus",
+        "activeTab"
+    ],
+    "background": {
+        "scripts": [
+            "windchill_debug.js"
+        ]
+    }
+}
