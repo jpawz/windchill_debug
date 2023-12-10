@@ -7,13 +7,13 @@ browser.menus.create({
 
 function toggleDebug(info, tab) {
 
-    const debugSuffix = "debug";
+    const debugSuffix = "jcaDebug";
     const currentUrl = new URL(tab.url);
 
     if (currentUrl.searchParams.has(debugSuffix)) {
         currentUrl.searchParams.delete(debugSuffix);
     } else {
-        currentUrl.searchParams.set(debugSuffix, "1");
+        currentUrl.searchParams.set(debugSuffix, "true");
     }
 
     browser.tabs.update(tab.id, { url: currentUrl.href });
